@@ -26,5 +26,8 @@
   "homepage": "https://github.com/FriedImage/LootyFrame#readme",
   "dependencies": {
     "discord.js": "^14.14.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0"
   }
 }
