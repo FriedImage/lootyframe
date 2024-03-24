@@ -1,9 +1,7 @@
-// Required modules
 const { SlashCommandBuilder } = require('discord.js');
 const axios = require('axios'); // For making HTTP requests
 const cheerio = require('cheerio'); // For parsing HTML
 
-// Command
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('info')
