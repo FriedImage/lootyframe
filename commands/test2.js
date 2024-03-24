@@ -1,7 +1,7 @@
-// discord command jargon
+
 const { SlashCommandBuilder } = require('discord.js');
 
-// module.exports to be read by other files
+
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('info')
