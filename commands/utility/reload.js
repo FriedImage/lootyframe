@@ -20,19 +20,31 @@ module.exports = {
 		}
 
 		// Check only for me and efthis
-		if (interaction.user.id === '266595826686623744' || interaction.user.id === '543923345234591764') {
-			delete require.cache[require.resolve(`../${command.category}/${command.data.name}.js`)];
+		// if (interaction.user.id === '266595826686623744' || interaction.user.id === '543923345234591764') {
+		// 	delete require.cache[require.resolve(`../${command.category}/${command.data.name}.js`)];
 
-			try {
-				interaction.client.commands.delete(command.data.name);
-				const newCommand = require(`../${command.category}/${command.data.name}.js`);
-				interaction.client.commands.set(newCommand.data.name, newCommand);
-				await interaction.reply(`Command \`${newCommand.data.name}\` was reloaded!`);
-			}
-			catch (error) {
-				console.error(error);
-				await interaction.reply(`There was an error while reloading a command \`${command.data.name}\`:\n\`${error.message}\``);
-			}
+		// 	try {
+		// 		interaction.client.commands.delete(command.data.name);
+		// 		const newCommand = require(`../${command.category}/${command.data.name}.js`);
+		// 		interaction.client.commands.set(newCommand.data.name, newCommand);
+		// 		await interaction.reply(`Command \`${newCommand.data.name}\` was reloaded!`);
+		// 	}
+		// 	catch (error) {
+		// 		console.error(error);
+		// 		await interaction.reply(`There was an error while reloading a command \`${command.data.name}\`:\n\`${error.message}\``);
+		// 	}
+		// }
+		delete require.cache[require.resolve(`../${command.category}/${command.data.name}.js`)];
+
+		try {
+			interaction.client.commands.delete(command.data.name);
+			const newCommand = require(`../${command.category}/${command.data.name}.js`);
+			interaction.client.commands.set(newCommand.data.name, newCommand);
+			await interaction.reply(`Command \`${newCommand.data.name}\` was reloaded!`);
+		}
+		catch (error) {
+			console.error(error);
+			await interaction.reply(`There was an error while reloading a command \`${command.data.name}\`:\n\`${error.message}\``);
 		}
 	},
 };
