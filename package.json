@@ -2,7 +2,7 @@
   "name": "lootyframe",
   "version": "1.0.0",
   "description": "a Loot and General Info Bot for the video-game Warframe!",
-  "main": "bot.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/FriedImage/LootyFrame#readme",
   "dependencies": {
-    "discord.js": "^14.14.1"
+    "discord.js": "^14.12.1"
   },
   "devDependencies": {
     "eslint": "^8.57.0"
