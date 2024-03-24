@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/FriedImage/LootyFrame/issues"
   },
-  "homepage": "https://github.com/FriedImage/LootyFrame#readme"
+  "homepage": "https://github.com/FriedImage/LootyFrame#readme",
+  "dependencies": {
+    "discord.js": "^14.14.1"
+  }
 }
