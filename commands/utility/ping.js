@@ -1,0 +1,12 @@
+// discord command jargon
+const { SlashCommandBuilder } = require('discord.js');
+
+// module.exports to be read by other files
+module.exports = {
+	data: new SlashCommandBuilder()
+		.setName('ping')
+		.setDescription('Replies with Pong!'),
+	async execute(interaction) {
+		await interaction.reply('Pong!');
+	},
+};
