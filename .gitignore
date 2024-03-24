@@ -131,4 +131,3 @@ dist
 
 # discord.js ignores
 config.json
-.vercel
