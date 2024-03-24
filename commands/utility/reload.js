@@ -21,8 +21,10 @@ module.exports = {
 
 		// Check only for me and efthis
 		if (interaction.user.id === '266595826686623744' || interaction.user.id === '543923345234591764') {
+			// Delete current command
 			delete require.cache[require.resolve(`../${command.category}/${command.data.name}.js`)];
 
+			// Reload new command
 			try {
 				interaction.client.commands.delete(command.data.name);
 				const newCommand = require(`../${command.category}/${command.data.name}.js`);
@@ -33,6 +35,9 @@ module.exports = {
 				console.error(error);
 				await interaction.reply(`There was an error while reloading a command \`${command.data.name}\`:\n\`${error.message}\``);
 			}
+		}
+		else {
+			await interaction.reply(`You don't have the permissions to run \`${command.data.name}!`);
 		}
 	},
 };
