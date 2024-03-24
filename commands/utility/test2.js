@@ -4,7 +4,7 @@ const { SlashCommandBuilder } = require('discord.js');
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName('info')
+		.setName('infooooo')
 		.setDescription('info for specific item'),
 	async execute(interaction) {
 		console.log('Info command received!');
