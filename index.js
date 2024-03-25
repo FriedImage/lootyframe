@@ -1,4 +1,5 @@
 // Require the necessary discord.js classes
+const { token } = require('./config.json');
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
@@ -51,4 +52,4 @@ for (const file of eventFiles) {
 }
 
 // Bot login
-client.login(process.env.DISCORD_TOKEN);
+client.login(token);
