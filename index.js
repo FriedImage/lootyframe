@@ -1,8 +1,8 @@
 // Require the necessary discord.js classes
-const { token } = require('./config.json');
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
+const { token } = require('./config.json');
 
 // Bot Accesses
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
